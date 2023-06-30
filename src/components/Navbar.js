@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "gatsby";
-import github from "../img/github-icon.svg";
 import logo from "../img/logo.svg";
 
 const Navbar = class extends React.Component {
@@ -63,28 +62,19 @@ const Navbar = class extends React.Component {
             className={`navbar-menu ${this.state.navBarActiveClass}`}
           >
             <div className="navbar-start has-text-centered">
-              <Link className="navbar-item" to="/about">
-                Accueil
+              <Link className="navbar-item" to="/actus">
+                Actualité
               </Link>
-              <Link className="navbar-item" to="/products">
+              <Link className="navbar-item" to="/commune">
                 La Commune
               </Link>
-              <Link className="navbar-item" to="/blog">
-                Vie Associative
-              </Link>
-              <Link className="navbar-item" to="/contact">
+              <Link className="navbar-item" to="/infos-pratiques">
                 Infos pratiques
               </Link>
-              <Link className="navbar-item" to="/contact/examples">
-                Location salle
+              <Link className="navbar-item" to="/galerie">
+                Galerie
               </Link>
-              <Link className="navbar-item" to="/contact/examples">
-                Photos
-              </Link>
-              <Link className="navbar-item" to="/contact/examples">
-                Services,Partage
-              </Link>
-              <Link className="navbar-item" to="/contact/examples">
+              <Link className="navbar-item" to="/liens">
                 Liens
               </Link>
             </div>
