@@ -4,6 +4,9 @@ services:
     build: .
     ports:
       - 8000:8000
+      - 37701:37701
     volumes:
       - .:/var/www/app
-    command: "npm run start"
+    environment:
+      - ENABLE_GATSBY_REFRESH_ENDPOINT=true
+    command: "npm run develop"

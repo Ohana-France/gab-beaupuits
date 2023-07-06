@@ -7,13 +7,15 @@ title: Commune
 
 Découvrez notre commune, son environnement naturel, urbain, paysager, sa démographie et son économie.  
 
-Accédez également aux pages dédiées à la vie de la commune.  
+Accédez également aux pages dédiées à la vie de la commune. 
 
-[/commune/conseil-municipal](Le conseil municipal) 
+<!-- ![eglise-gab](/img/eglise-de-grandvillers.jpg) -->
+[Le conseil municipal](/commune/conseil-municipal) 
 
-[/commune/compte-rendus](Compte rendus des conseils municipaux) 
+[Compte rendus des conseils municipaux](/commune/compte-rendus) 
 
-[/commune/bulletins-municipaux](Bulletins municipaux) 
+[Bulletins municipaux](/commune/bulletins-municipaux) 
+
 
 # Environnement naturel de la commune
 

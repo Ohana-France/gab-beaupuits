@@ -1,0 +1,11 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "shell",
+			"label": "Refresh",
+			"command": "while true; do curl -X POST http://localhost:8000/__refresh; sleep 10; done",
+			"problemMatcher": [],
+		}
+	]
+}

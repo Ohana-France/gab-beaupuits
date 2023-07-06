@@ -123,6 +123,13 @@ collections:
                   },
                 ],
             }
+      
+      - name: "commune"
+        file: "src/pages/commune/index.md"
+        label: "Commune"
+        fields:
+          - { label: "title" }
+    
       - file: "src/pages/about/index.md"
         label: "About"
         name: "about"
