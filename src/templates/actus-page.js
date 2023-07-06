@@ -12,7 +12,7 @@ export const ActusPageTemplate = ({ title, panneauPocketUrl, content, contentCom
     <section className="section section--gradient">
       <div className="container">
         <div className="columns">
-          <div className="column is-four-fifths is-offset-1">
+          <div className="column">
             <div className="section">
               <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
                 {title}
@@ -21,7 +21,7 @@ export const ActusPageTemplate = ({ title, panneauPocketUrl, content, contentCom
               
             </div>
           </div>
-          <iframe className="column is-narrow" src={panneauPocketUrl} title="title" frameborder="0" width="330" height="500" />
+          <iframe className="column is-narrow" style={{width:330}} src={panneauPocketUrl} title="title" frameborder="0" width="330" height="500" />
         </div>
       </div>
     </section>
