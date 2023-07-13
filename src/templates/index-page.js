@@ -2,7 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
-import { HTMLContent } from "../components/Content";
 import { getImage } from "gatsby-plugin-image";
 import FullWidthImage from "../components/FullWidthImage";
 
@@ -28,8 +27,6 @@ IndexPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   panneauPocketUrl: PropTypes.string.isRequired,
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  content: PropTypes.string,
-  contentComponent: PropTypes.func,
 };
 
 const IndexPage = ({ data }) => {
@@ -38,10 +35,8 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <IndexPageTemplate
-        contentComponent={HTMLContent}
         title={post.frontmatter.title}
         panneauPocketUrl={post.frontmatter.panneauPocketUrl}
-        content={post.html}
         image={post.frontmatter.image}
       />
     </Layout>
