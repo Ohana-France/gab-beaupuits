@@ -1,11 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { BlogPostTemplate } from '../../templates/blog-post'
+import { GaleriePostTemplate } from '../../templates/galerie-post'
 
-const BlogPostPreview = ({ entry, widgetFor }) => {
+const GaleriePostPreview = ({ entry, widgetFor }) => {
   const tags = entry.getIn(['data', 'tags'])
   return (
-    <BlogPostTemplate
+    <GaleriePostTemplate
       content={widgetFor('body')}
       description={entry.getIn(['data', 'description'])}
       tags={tags && tags.toJS()}
@@ -14,11 +14,11 @@ const BlogPostPreview = ({ entry, widgetFor }) => {
   )
 }
 
-BlogPostPreview.propTypes = {
+GaleriePostPreview.propTypes = {
   entry: PropTypes.shape({
     getIn: PropTypes.func,
   }),
   widgetFor: PropTypes.func,
 }
 
-export default BlogPostPreview
+export default GaleriePostPreview

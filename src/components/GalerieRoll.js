@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
 
-class BlogRollTemplate extends React.Component {
+class GalerieRollTemplate extends React.Component {
   render() {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
@@ -14,7 +14,7 @@ class BlogRollTemplate extends React.Component {
           posts.map(({ node: post }) => (
             <div className="is-parent column is-6" key={post.id}>
               <article
-                className={`blog-list-item tile is-child box notification ${
+                className={`galerie-list-item tile is-child box notification ${
                   post.frontmatter.featuredpost ? 'is-featured' : ''
                 }`}
               >
@@ -64,7 +64,7 @@ class BlogRollTemplate extends React.Component {
   }
 }
 
-BlogRoll.propTypes = {
+GalerieRoll.propTypes = {
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
       edges: PropTypes.array,
@@ -73,14 +73,14 @@ BlogRoll.propTypes = {
 }
 
 
-export default function BlogRoll() {
+export default function GalerieRoll() {
   return (
     <StaticQuery
       query={graphql`
-        query BlogRollQuery {
+        query GalerieRollQuery {
           allMarkdownRemark(
             sort: { order: DESC, fields: [frontmatter___date] }
-            filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
+            filter: { frontmatter: { templateKey: { eq: "galerie-post" } } }
           ) {
             edges {
               node {
@@ -110,7 +110,7 @@ export default function BlogRoll() {
           }
         }
       `}
-      render={(data, count) => <BlogRollTemplate data={data} count={count} />}
+      render={(data, count) => <GalerieRollTemplate data={data} count={count} />}
     />
   );
 }
