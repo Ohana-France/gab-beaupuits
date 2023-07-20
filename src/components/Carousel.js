@@ -19,12 +19,11 @@ export const Carousel = ({
     return (
         <Slider {...settings}>
             {images.map((image, index) =>
-                <div style={{ height: height * 0.9, width: '100%' }}>
+                <div style={{ height: height * 0.9, width: '100%' }} key={index}>
                     <GatsbyImage
                         style={{ height: height * 0.9 }}
                         imgStyle={{ height: height * 0.9, objectFit: 'contain' }}
                         image={getImage(image)}
-                        key={index}
                         alt={"image-" + index} /></div>)}
         </Slider>
     );
