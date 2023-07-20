@@ -3,9 +3,9 @@ import PropTypes from "prop-types";
 import { GatsbyImage } from "gatsby-plugin-image";
 
 const PreviewCompatibleImage = ({ imageInfo }) => {
-  const imageStyle = { borderRadius: "5px" };
+  const { alt = "", childImageSharp, image, style } = imageInfo;
+  const imageStyle = { ...style, borderRadius: "5px" };
 
-  const { alt = "", childImageSharp, image } = imageInfo;
 
   if (!!image && !!image.childImageSharp) {
     return (
@@ -25,7 +25,7 @@ const PreviewCompatibleImage = ({ imageInfo }) => {
     );
     // for Netlify CMS 
   } else if (image) {
-    return <img style={{imageStyle}} src={image} alt={alt} />;
+    return <img style={{ imageStyle }} src={image} alt={alt} />;
   } else {
     return null
   }

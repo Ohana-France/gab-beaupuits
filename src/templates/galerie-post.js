@@ -36,7 +36,7 @@ export const GaleriePostTemplate = ({
             {images.map((image, index) =>
               <GatsbyImage
                 onClick={() => { setIsOpen(true); setSelectedIndex(index); }}
-                style={{ padding: 50, margin: 20, width: 300, height: 'auto' }}
+                style={{ padding: 50, margin: 20, width: 300, height: 200, objectFit: 'cover' }}
                 image={getImage(image)}
                 key={index}
                 alt={title + "-" + index} />
@@ -81,7 +81,6 @@ const GaleriePost = ({ data }) => {
             />
           </Helmet>
         }
-        tags={post.frontmatter.tags}
         title={post.frontmatter.title}
         images={post.frontmatter.images}
       />
@@ -108,7 +107,6 @@ export const pageQuery = graphql`
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title
-        tags
         images {
           childImageSharp {
             gatsbyImageData(
