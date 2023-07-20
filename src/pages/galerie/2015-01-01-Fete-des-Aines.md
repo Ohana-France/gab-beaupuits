@@ -16,7 +16,7 @@ images:
   - /img/galerie/Fete_des_Aines_2015/IMG_2508.jpg
   - /img/galerie/Fete_des_Aines_2015/IMG_2510.jpg
   - /img/galerie/Fete_des_Aines_2015/IMG_2513.jpg
-slug: Fete_des_Aines_2015
+slug: 2015-01-01-Fete-des-Aines
 tags:
   - grandvillers-aux-bois
   - eglise

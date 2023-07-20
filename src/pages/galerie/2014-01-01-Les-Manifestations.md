@@ -28,7 +28,7 @@ images:
   - /img/galerie/Les_Manifestations/SLY_2118.jpg
   - /img/galerie/Les_Manifestations/SLY_2121.jpg
   - /img/galerie/Les_Manifestations/SLY_2127.jpg
-slug: Les_Manifestations
+slug: 2014-01-01-Les-Manifestations
 tags:
   - grandvillers-aux-bois
   - eglise

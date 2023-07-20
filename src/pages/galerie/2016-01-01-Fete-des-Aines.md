@@ -11,7 +11,7 @@ images:
   - /img/galerie/Fete_des_Aines_2016/IMG_0977.jpg
   - /img/galerie/Fete_des_Aines_2016/IMG_0978.jpg
   - /img/galerie/Fete_des_Aines_2016/IMG_0979.jpg
-slug: Fete_des_Aines_2016
+slug: 2016-01-01-Fete-des-Aines
 tags:
   - grandvillers-aux-bois
   - eglise

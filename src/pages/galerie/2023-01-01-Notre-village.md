@@ -16,7 +16,7 @@ images:
   - /img/galerie/Notre_village/IMG_9941.jpg
   - /img/galerie/Notre_village/IMG_9942.jpg
   - /img/galerie/Notre_village/IMG_9944 (1).jpg
-slug: Notre_village
+slug: 2023-01-01-Notre-village
 tags:
   - grandvillers-aux-bois
   - eglise

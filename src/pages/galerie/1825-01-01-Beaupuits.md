@@ -20,7 +20,7 @@ images:
   - /img/galerie/Le_Beaupuits_dantan/Ferme Praquin.jpg
   - /img/galerie/Le_Beaupuits_dantan/Rue arbre des pauvres - 1.jpg
   - /img/galerie/Le_Beaupuits_dantan/Rue arbre des pauvres - vue du bas.jpg
-slug: Le_Beaupuits_dantan
+slug: 1825-01-01-Beaupuits
 tags:
   - grandvillers-aux-bois
   - eglise

@@ -11,7 +11,7 @@ images:
   - /img/galerie/Repas_des_Anciens_2017/SLY_3905.jpg
   - /img/galerie/Repas_des_Anciens_2017/SLY_3906.jpg
   - /img/galerie/Repas_des_Anciens_2017/SLY_3908.jpg
-slug: Repas_des_Anciens_2017
+slug: 2017-01-01-Repas_des_Anciens
 tags:
   - grandvillers-aux-bois
   - eglise

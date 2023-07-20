@@ -14,9 +14,8 @@ class GalerieRollTemplate extends React.Component {
           posts.map(({ node: post }) => (
             <div className="is-parent column is-6" key={post.id}>
               <article
-                className={`galerie-list-item tile is-child box notification ${
-                  post.frontmatter.featuredpost ? 'is-featured' : ''
-                }`}
+                className={`galerie-list-item tile is-child box notification 
+                  }`}
               >
                 <header>
                   {post.frontmatter.featuredimage ? (
@@ -42,20 +41,8 @@ class GalerieRollTemplate extends React.Component {
                     >
                       {post.frontmatter.title}
                     </Link>
-                    <span> &bull; </span>
-                    <span className="subtitle is-size-5 is-block">
-                      {post.frontmatter.date}
-                    </span>
                   </p>
                 </header>
-                <p>
-                  {post.excerpt}
-                  <br />
-                  <br />
-                  <Link className="button" to={post.fields.slug}>
-                    Keep Reading →
-                  </Link>
-                </p>
               </article>
             </div>
           ))}
@@ -79,7 +66,7 @@ export default function GalerieRoll() {
       query={graphql`
         query GalerieRollQuery {
           allMarkdownRemark(
-            sort: { order: DESC, fields: [frontmatter___date] }
+            sort: { order: DESC, fields: [fields___slug] }
             filter: { frontmatter: { templateKey: { eq: "galerie-post" } } }
           ) {
             edges {
@@ -92,8 +79,6 @@ export default function GalerieRoll() {
                 frontmatter {
                   title
                   templateKey
-                  date(formatString: "MMMM DD, YYYY")
-                  featuredpost
                   featuredimage {
                     childImageSharp {
                       gatsbyImageData(

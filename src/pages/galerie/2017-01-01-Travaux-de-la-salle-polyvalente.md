@@ -10,7 +10,7 @@ images:
   - /img/galerie/Travaux_de_la_Salle_Polyvalente/Travaux Salle Polyvalente 3.jpg
   - /img/galerie/Travaux_de_la_Salle_Polyvalente/Travaux Salle Polyvalente 4.jpg
   - /img/galerie/Travaux_de_la_Salle_Polyvalente/Travaux Salle Polyvalente.jpg
-slug: Travaux_de_la_Salle_Polyvalente
+slug: 2017-01-01-Travaux-de-la-salle-polyvalente
 tags:
   - grandvillers-aux-bois
   - eglise

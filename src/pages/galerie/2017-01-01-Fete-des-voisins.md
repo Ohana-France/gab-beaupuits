@@ -26,7 +26,7 @@ images:
   - /img/galerie/Fete_des_Voisins_2017/SLY_2225.jpg
   - /img/galerie/Fete_des_Voisins_2017/SLY_2226.jpg
   - /img/galerie/Fete_des_Voisins_2017/SLY_2227.jpg
-slug: Fete_des_Voisins_2017
+slug: 2017-01-01-Fete-des-voisins
 tags:
   - grandvillers-aux-bois
   - eglise

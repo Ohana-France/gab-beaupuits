@@ -38,7 +38,7 @@ images:
   - /img/galerie/Fete_des_Aines_2014/IMG_0364.jpg
   - /img/galerie/Fete_des_Aines_2014/IMG_0367.jpg
   - /img/galerie/Fete_des_Aines_2014/IMG_0371.jpg
-slug: Fete_des_Aines_2014
+slug: 2014-01-01-Fete-des-Aines
 tags:
   - grandvillers-aux-bois
   - eglise

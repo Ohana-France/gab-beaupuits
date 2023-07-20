@@ -28,7 +28,7 @@ images:
   - /img/galerie/Club_des_Retraites/P1020805.jpg
   - /img/galerie/Club_des_Retraites/P1030014.jpg
   - /img/galerie/Club_des_Retraites/P1030016.jpg
-slug: Club_des_Retraites
+slug: 2016-06-20-Club-Retraites
 tags:
   - grandvillers-aux-bois
   - eglise

@@ -11,7 +11,7 @@ images:
   - /img/galerie/Il_etait_une_fois_Grandvillers_Aux_Bois/GAB Rue du Calvaire 2.jpg
   - /img/galerie/Il_etait_une_fois_Grandvillers_Aux_Bois/GAB Rue du Calvaire.jpg
   - /img/galerie/Il_etait_une_fois_Grandvillers_Aux_Bois/GAB-Moulin.jpg
-slug: Il_etait_une_fois_Grandvillers_Aux_Bois
+slug: 1825-01-01-Il-etait-une-fois
 tags:
   - grandvillers-aux-bois
   - eglise
