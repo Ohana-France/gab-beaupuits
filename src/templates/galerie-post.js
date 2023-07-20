@@ -8,7 +8,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { Carousel } from "../components/Carousel";
 import Modal from 'react-modal';
 
-if (window) {
+if (typeof window !== "undefined" && window) {
   Modal.setAppElement('#___gatsby');
 }
 // eslint-disable-next-line
