@@ -1,19 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { Carousel } from "../components/Carousel";
+import Modal from 'react-modal';
 
+if (window) {
+  Modal.setAppElement('#___gatsby');
+}
 // eslint-disable-next-line
 export const GaleriePostTemplate = ({
   content,
   contentComponent,
   title,
   helmet,
+  images
 }) => {
   const PostContent = contentComponent || Content;
-
+  const [isOpen, setIsOpen] = useState(false);
+  const [selectedIndex, setSelectedIndex] = useState(0);
+  const [height, setHeight] = useState(600);
   return (
     <section className="section">
       {helmet || ""}
@@ -24,6 +33,20 @@ export const GaleriePostTemplate = ({
               {title}
             </h1>
             <PostContent content={content} />
+            {images.map((image, index) =>
+              <GatsbyImage
+                onClick={() => { setIsOpen(true); setSelectedIndex(index); }}
+                style={{ padding: 50, margin: 20, width: 300, height: 'auto' }}
+                image={getImage(image)}
+                key={index}
+                alt={title + "-" + index} />
+            )}
+            <Modal isOpen={isOpen}
+              onRequestClose={() => setIsOpen(false)}
+              onAfterOpen={(modal) => setHeight(modal.contentEl.clientHeight)}
+            >
+              <Carousel images={images} selectedIndex={selectedIndex} height={height} />
+            </Modal>
           </div>
         </div>
       </div>
@@ -60,6 +83,7 @@ const GaleriePost = ({ data }) => {
         }
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
+        images={post.frontmatter.images}
       />
     </Layout>
   );
@@ -88,11 +112,10 @@ export const pageQuery = graphql`
         images {
           childImageSharp {
             gatsbyImageData(
-              width: 120
+              width: 2000
               quality: 100
               layout: CONSTRAINED
             )
-
           }
         }
       }
