@@ -58,6 +58,35 @@ collections:
           - { label: Titre, name: title, widget: string }
           - { label: Image, name: image, widget: image }
           - { label: "URL Panneau Pocket", name: panneauPocketUrl, widget: string }
+  - name: "conseil"
+    label: "Conseil"
+    media_folder: "/static/img/conseil"
+    public_folder: /img/conseil
+    files:
+      - file: "src/pages/commune/conseil-municipal/index.md"
+        label: "Conseil"
+        name: "index"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "conseil-page",
+            }
+          - { label: Titre, name: title, widget: string }
+          - { label: "Body", name: "body", widget: "markdown", required: false }
+          - label: "Membres"
+            name: "members"
+            widget: "list"
+            collapsed: true
+            summary: '{{fields.name}}'
+            fields:
+              - { label: "Nom", name: "name", widget: "string" }
+              - { label: "Rang", name: "rank", widget: "select", options: ["1", "2", "3"] }
+              - { label: "Titre", name: "title", widget: "string" }
+              - { label: "Profession", name: "profession", widget: "string" }
+              - { label: "Comissions", name: "commissions", widget: "list" }
+              - { label: "Image", name: "image", widget: "image"}
   - name: "pages"
     label: "Pages"
     files:
