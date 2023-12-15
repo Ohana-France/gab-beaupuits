@@ -32,7 +32,7 @@ export const ConseilPageTemplate = ({ title, content, contentComponent, members 
                                             width: 600,
                                             boxShadow: "0px 0px 10px -3px rgba(0,0,0,0.1)"
                                         }}
-                                            key={"member-" + { index }}>
+                                            key={"member-" + index}>
                                             <img
                                                 src={member.image.publicURL}
                                                 style={{
