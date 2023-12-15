@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { GaleriePostTemplate } from '../../templates/galerie-post'
 
 const GaleriePostPreview = ({ entry, widgetFor }) => {
-  const tags = entry.getIn(['data', 'tags'])
+  console.log(entry);
   return (
     <GaleriePostTemplate
       content={widgetFor('body')}

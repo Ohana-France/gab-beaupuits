@@ -10,7 +10,7 @@ import IndexPagePreview from './preview-templates/IndexPagePreview'
 CMS.registerMediaLibrary(uploadcare)
 CMS.registerMediaLibrary(cloudinary)
 
-CMS.registerPreviewTemplate('index-page', IndexPagePreview)
-CMS.registerPreviewTemplate('about-page', AboutPagePreview)
-CMS.registerPreviewTemplate('galerie-post', GaleriePostPreview)
+CMS.registerPreviewTemplate('home', IndexPagePreview)
+CMS.registerPreviewTemplate('pages', AboutPagePreview)
+CMS.registerPreviewTemplate('galerie', GaleriePostPreview)
 CMS.registerLocale('fr', fr)

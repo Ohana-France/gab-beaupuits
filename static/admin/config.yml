@@ -3,11 +3,11 @@ backend:
   branch: main
   repo: Ohana-France/gab-beaupuits
   commit_messages:
-    create: "Create {{collection}} “{{slug}}”"
-    update: "Update {{collection}} “{{slug}}”"
-    delete: "Delete {{collection}} “{{slug}}”"
+    create: "Création {{collection}} “{{slug}}”"
+    update: "Mise à jour {{collection}} “{{slug}}”"
+    delete: "Suppresion {{collection}} “{{slug}}”"
     uploadMedia: "[skip ci] Upload “{{path}}”"
-    deleteMedia: "[skip ci] Delete “{{path}}”"
+    deleteMedia: "[skip ci] Suppression “{{path}}”"
 
 local_backend: true
 media_folder: static/img
@@ -20,6 +20,7 @@ collections:
     folder: "src/pages/galerie"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    media_folder: "/static/img/galerie/{{folder}}"
     fields:
       - {
           label: "Template Key",
@@ -28,6 +29,7 @@ collections:
           default: "galerie-post",
         }
       - { label: "Titre", name: "title", widget: "string" }
+      - { label: "Dossier principal", name: "folder", widget: "string" }
       - { label: "Date de publication", name: "date", widget: "datetime" }
       - label: "Image principale"
         name: "featuredimage"
@@ -35,13 +37,13 @@ collections:
       - label: "Images"
         name: "images"
         widget: "list"
-        fields:
-          - { name: "image", widget: "image" }
+        collapsed: true
+        summary: '{{fields.image}}'
+        field: { name: "image", widget: "image" }
       - { label: "Post associé (optionnel)", name: "body", widget: "markdown", required: false }
       - { label: "Tags", name: "tags", widget: "list" }
-
-  - name: "pages"
-    label: "Pages"
+  - name: "home"
+    label: "Accueil"
     files:
       - file: "src/pages/index.md"
         label: "Actus"
@@ -56,7 +58,9 @@ collections:
           - { label: Titre, name: title, widget: string }
           - { label: Image, name: image, widget: image }
           - { label: "URL Panneau Pocket", name: panneauPocketUrl, widget: string }
-      
+  - name: "pages"
+    label: "Pages"
+    files:
       - name: "commune"
         file: "src/pages/commune/index.md"
         label: "Commune"
