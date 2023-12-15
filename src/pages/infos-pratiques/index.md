@@ -40,6 +40,5 @@ Les poubelles peuvent être sorties à partir du dimanche soir et doivent être 
 
 [![paroisse-saint-martin](/img/paroisse-saint-martin.bmp)](https://oise.catholique.fr/paroisses/paroisse-plateau-picard)
 
-
 [![eglise-catholigue-oise](/img/eglise-catholigue-oise.bmp)](https://www.facebook.com/pages/category/Community/Paroisse-saint-martin-du-plateau-picard-196480414212733/)
 

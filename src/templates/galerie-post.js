@@ -23,6 +23,7 @@ export const GaleriePostTemplate = ({
   const [isOpen, setIsOpen] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [height, setHeight] = useState(600);
+  console.log("this is working");
   return (
     <section className="section">
       {helmet || ""}
@@ -57,7 +58,6 @@ export const GaleriePostTemplate = ({
 GaleriePostTemplate.propTypes = {
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
-  description: PropTypes.string,
   title: PropTypes.string,
   helmet: PropTypes.object,
   images: PropTypes.array
@@ -65,13 +65,11 @@ GaleriePostTemplate.propTypes = {
 
 const GaleriePost = ({ data }) => {
   const { markdownRemark: post } = data;
-  console.log(data)
   return (
     <Layout>
       <GaleriePostTemplate
         content={post.html}
         contentComponent={HTMLContent}
-        description={post.frontmatter.description}
         helmet={
           <Helmet titleTemplate="%s | Galerie">
             <title>{`${post.frontmatter.title}`}</title>

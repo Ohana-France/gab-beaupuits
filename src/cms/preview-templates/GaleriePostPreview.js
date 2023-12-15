@@ -8,8 +8,8 @@ const GaleriePostPreview = ({ entry, widgetFor }) => {
     <GaleriePostTemplate
       content={widgetFor('body')}
       description={entry.getIn(['data', 'description'])}
-      tags={tags && tags.toJS()}
       title={entry.getIn(['data', 'title'])}
+      images={entry.getIn(['data', 'images'])}
     />
   )
 }
